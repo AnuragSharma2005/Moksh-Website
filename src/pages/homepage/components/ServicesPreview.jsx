@@ -227,46 +227,46 @@ const ServicesPreview = () => {
         </div>
 
         {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="text-center mt-16">
-
-          <div className="glass-card rounded-2xl p-8 bg-moksha-gradient">
-            <h3 className="font-headline text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="font-body text-white/90 mb-6 max-w-2xl mx-auto">
-              Let's discuss your project requirements and create a custom solution that drives results.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                variant="default"
-                size="lg"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-cta"
-                asChild>
-
-                <Link to="/demo-request">
-                  <Icon name="Calendar" size={20} className="mr-2" />
-                  Schedule Consultation
-                </Link>
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-white/30 text-white hover:bg-white/10"
-                asChild>
-
-                <Link to="/services">
-                  <Icon name="Eye" size={20} className="mr-2" />
-                  View All Services
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </motion.div>
+       <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.3 }}
+  viewport={{ once: true }}
+  className="text-center mt-16"
+>
+  <div className="glass-card rounded-2xl p-8 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700">
+    <h3 className="font-headline text-2xl font-bold text-white mb-4">
+      Ready to Transform Your Business?
+    </h3>
+    <p className="font-body text-white mb-6 max-w-2xl mx-auto">
+      Let's discuss your project requirements and create a custom solution that drives results.
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <Button
+        variant="default"
+        size="lg"
+        className="bg-accent hover:bg-accent/90 text-accent-foreground font-cta"
+        asChild
+      >
+        <Link to="/demo-request">
+          <Icon name="Calendar" size={20} className="mr-2" />
+          Schedule Consultation
+        </Link>
+      </Button>
+      <Button
+        variant="outline"
+        size="lg"
+        className="border-white/30 text-white hover:bg-white/10"
+        asChild
+      >
+        <Link to="/services">
+          <Icon name="Eye" size={20} className="mr-2" />
+          View All Services
+        </Link>
+      </Button>
+    </div>
+  </div>
+</motion.div>
       </div>
     </section>);
 

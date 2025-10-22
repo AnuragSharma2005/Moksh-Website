@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import Header from '../../components/ui/Header';
 import MissionVisionSection from './components/MissionVisionSection';
-import CompanyTimeline from './components/CompanyTimeline';
+// import CompanyTimeline from './components/CompanyTimeline';
 import ValuesSection from './components/ValuesSection';
 import GovernmentAuthSection from './components/GovernmentAuthSection';
-import AwardsSection from './components/AwardsSection';
+
 import StatsSection from './components/StatsSection';
 import FloatingActions from '../../components/FloatingActions';
 
@@ -32,10 +32,10 @@ const AboutPage = () => {
       <div className="min-h-screen bg-background">
         <Header />
         <MissionVisionSection />
-        <CompanyTimeline />
+        {/* <CompanyTimeline /> */}
         <ValuesSection />
         <GovernmentAuthSection />
-        <AwardsSection />
+      
         <StatsSection />
         <FloatingActions />
       </div>

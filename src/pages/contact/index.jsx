@@ -4,8 +4,8 @@ import Header from '../../components/ui/Header';
 import ContactHero from './components/ContactHero';
 import ContactMethods from './components/ContactMethods';
 import ContactForm from './components/ContactForm';
-import OfficeLocation from './components/OfficeLocation';
-import TestimonialWall from './components/TestimonialWall';
+// import OfficeLocation from './components/OfficeLocation';
+// import TestimonialWall from './components/TestimonialWall';
 import FloatingActions from '../../components/FloatingActions';
 
 const Contact = () => {
@@ -33,8 +33,8 @@ const Contact = () => {
         <ContactHero />
         <ContactMethods />
         <ContactForm />
-        <OfficeLocation />
-        <TestimonialWall />
+        {/* <OfficeLocation /> */}
+        {/* <TestimonialWall /> */}
         <FloatingActions />
       </div>
     </>

@@ -165,7 +165,7 @@ const ContactMethods = () => {
         </div>
 
         {/* Emergency Contact */}
-        <div className="mt-12 bg-conversion/10 border border-conversion/20 rounded-xl p-6 text-center">
+        {/* <div className="mt-12 bg-conversion/10 border border-conversion/20 rounded-xl p-6 text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Icon name="AlertCircle" size={24} className="text-conversion" />
             <h3 className="font-headline text-lg font-semibold text-foreground">
@@ -184,7 +184,7 @@ const ContactMethods = () => {
           >
             Priority Support: +91 98765 43210
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
