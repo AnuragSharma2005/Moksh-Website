@@ -4,28 +4,28 @@ import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const teamMembers = [
   {
-    name: "Aarav Mehta",
-    role: "Lead Developer",
+    name: "Lakshya Chauhan",
+    role: "CEO & Founder",
     qualification: "B.Tech in Computer Science",
     img: "https://randomuser.me/api/portraits/men/32.jpg",
   },
   {
-    name: "Priya Sharma",
-    role: "UI/UX Designer",
-    qualification: "M.Des in Interaction Design",
-    img: "https://randomuser.me/api/portraits/women/45.jpg",
+    name: "Anurag Sharma",
+    role: "Co-Founder & CMO",
+    qualification: "Bachelor of Computer Science Engineer",
+    img: "Anurag.jpg",
   },
   {
-    name: "Rohan Kapoor",
-    role: "Project Manager",
-    qualification: "MBA in Operations",
+    name: "Aditya Sharma",
+    role: "Co-Founder & CTO",
+    qualification: "Bachelor of Computer Science Engineer",
     img: "https://randomuser.me/api/portraits/men/76.jpg",
   },
   {
-    name: "Neha Verma",
-    role: "Marketing Strategist",
-    qualification: "MA in Digital Marketing",
-    img: "https://randomuser.me/api/portraits/women/66.jpg",
+    name: "Vaibhav Katiyal",
+    role: "Co-Founder & CTO",
+    qualification: "Bachelor of Computer Science Engineer",
+    img: "Vaibhav1.jpg",
   },
 ];
 
@@ -112,7 +112,7 @@ const ExpertiseMapping = () => {
                 </p>
 
                 {/* Social Icons */}
-                <div className="flex space-x-6 mt-4">
+                {/* <div className="flex space-x-6 mt-4">
                   {[FaLinkedin, FaTwitter, FaInstagram].map((Icon, idx) => (
                     <motion.a
                       key={idx}
@@ -123,12 +123,12 @@ const ExpertiseMapping = () => {
                       <Icon size={24} />
                     </motion.a>
                   ))}
-                </div>
+                </div> */}
 
                 {/* Optional Badge */}
-                <div className="absolute bottom-4 right-4 bg-gradient-to-r from-blue-600 to-purple-500 text-white text-xs px-3 py-1 rounded-full shadow-md">
+                {/* <div className="absolute bottom-4 right-4 bg-gradient-to-r from-blue-600 to-purple-500 text-white text-xs px-3 py-1 rounded-full shadow-md">
                   Top Designer
-                </div>
+                </div> */}
               </div>
             </motion.div>
           ))}

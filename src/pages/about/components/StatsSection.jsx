@@ -10,9 +10,9 @@ const StatsSection = () => {
   });
 
   const finalStats = {
-    projects: 250,
-    clients: 150,
-    experience: 5,
+    projects: 5,
+    clients: 5,
+    experience: 6,
     satisfaction: 98
   };
 

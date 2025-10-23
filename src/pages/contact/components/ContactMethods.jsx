@@ -78,10 +78,10 @@ const ContactMethods = () => {
   const handleContactAction = (method) => {
     switch (method?.type) {
       case "WhatsApp":
-        window.open(`https://wa.me/919876543210?text=Hi! I'm interested in your digital services.`, '_blank');
+        window.open(`https://wa.me/919877653180?text=Hi! I'm interested in your digital services.`, '_blank');
         break;
       case "Phone Call":
-        window.location.href = `tel:+919876543210`;
+        window.location.href = `tel:+919877653180`;
         break;
       case "Email":
       case "Business Email":
@@ -89,7 +89,7 @@ const ContactMethods = () => {
         break;
       case "Video Call":
         // Make a call (replace with actual number if needed)
-        window.location.href = `tel:+919876543210`;
+        window.location.href = `tel:+919877653180`;
         break;
       case "Office Visit":
         // Scroll to form

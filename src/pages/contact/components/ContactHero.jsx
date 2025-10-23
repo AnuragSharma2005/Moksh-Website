@@ -41,21 +41,23 @@ const ContactHero = () => {
               iconName="Phone"
               iconPosition="left"
             >
-              Call Now: +91 98765 43210
+              Call Now: +91 98776 53180
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-primary font-cta"
-              iconName="MessageCircle"
-              iconPosition="left"
-            >
-              WhatsApp Chat
-            </Button>
+           <Button
+            variant="outline"
+            size="lg"
+            className="border-white text-white hover:bg-white hover:text-primary font-cta"
+            iconName="MessageCircle"
+            iconPosition="left"
+            onClick={() => window.open("https://wa.me/919877653180", "_blank")}
+          >
+            WhatsApp Chat
+          </Button>
+
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex flex-wrap justify-center items-center gap-6 mt-12 text-white/80">
+          {/* <div className="flex flex-wrap justify-center items-center gap-6 mt-12 text-white/80">
             <div className="flex items-center space-x-2">
               <Icon name="Clock" size={16} />
               <span className="text-sm">24/7 Support</span>
@@ -68,7 +70,7 @@ const ContactHero = () => {
               <Icon name="Users" size={16} />
               <span className="text-sm">500+ Happy Clients</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

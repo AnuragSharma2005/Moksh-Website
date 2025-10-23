@@ -104,10 +104,10 @@ const ServicesPreview = () => {
           
           {/* Service Stats */}
           <div className="flex flex-wrap justify-center gap-8 mb-12">
-            <div className="text-center">
+            {/* <div className="text-center">
               <div className="text-2xl font-bold text-primary">500+</div>
               <div className="text-sm text-muted-foreground">Projects Delivered</div>
-            </div>
+            </div> */}
             <div className="text-center">
               <div className="text-2xl font-bold text-primary">98%</div>
               <div className="text-sm text-muted-foreground">Client Satisfaction</div>
@@ -116,10 +116,10 @@ const ServicesPreview = () => {
               <div className="text-2xl font-bold text-primary">24/7</div>
               <div className="text-sm text-muted-foreground">Support Available</div>
             </div>
-            <div className="text-center">
+            {/* <div className="text-center">
               <div className="text-2xl font-bold text-primary">5+</div>
               <div className="text-sm text-muted-foreground">Years Experience</div>
-            </div>
+            </div> */}
           </div>
         </motion.div>
 

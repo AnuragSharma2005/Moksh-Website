@@ -21,7 +21,7 @@ const FloatingActions = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = '+919876543210';
+    const phoneNumber = '+919877653180';
     const message = encodeURIComponent(
       "Hi! I'm interested in your digital services. Can we discuss my project requirements?"
     );
@@ -29,11 +29,11 @@ const FloatingActions = () => {
   };
 
   const handleCallClick = () => {
-    window.open('tel:+919876543210', '_self');
+    window.open('tel:+919877653180', '_self');
   };
 
   const handleEmailClick = () => {
-    window.open('mailto:hello@mokshdigital.com?subject=Inquiry About Digital Services', '_self');
+    window.open('mailto:mokshdigitalco@gmail.com?subject=Inquiry About Digital Services', '_self');
   };
 
   const scrollToTop = () => {
@@ -66,7 +66,7 @@ const FloatingActions = () => {
       label: 'Call Now',
       onClick: handleCallClick,
       className: 'bg-blue-500 hover:bg-blue-600 text-white shadow-lg hover:shadow-xl',
-      tooltip: 'Call +91 98765 43210',
+      tooltip: 'Call +91 98776 53180',
       dismissible: true,
     },
     {
@@ -143,9 +143,9 @@ const FloatingActions = () => {
               </AnimatePresence>
 
               {/* Action Button */}
-              <motion.button
+             <motion.button
                 onClick={action.onClick}
-                className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-normal hover-lift ${action.className}`}
+                className={`w-14 h-14 rounded-full flex items-center justify-center cursor-pointer transition-all duration-normal hover-lift ${action.className}`}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 aria-label={action.label}

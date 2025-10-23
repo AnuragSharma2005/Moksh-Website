@@ -2,8 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
+import { useNavigate } from 'react-router-dom';
 
 const ServiceHero = () => {
+
+  
+  const navigate = useNavigate(); 
   return (
     <section className="relative min-h-[60vh] bg-moksha-gradient overflow-hidden">
       {/* Background Elements */}
@@ -42,14 +46,15 @@ const ServiceHero = () => {
             className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
           >
             <Button
-              variant="default"
-              size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-cta px-8 py-4"
-            >
-              <Icon name="Calendar" size={20} className="mr-2" />
-              Schedule Consultation
-            </Button>
-            
+      variant="default"
+      size="lg"
+      className="bg-accent hover:bg-accent/90 text-accent-foreground font-cta px-8 py-4"
+      onClick={() => navigate('/demo-request')} // page redirect
+    >
+      <Icon name="Calendar" size={20} className="mr-2" />
+      Schedule Consultation
+    </Button>
+                  
             {/* <Button
               variant="outline"
               size="lg"

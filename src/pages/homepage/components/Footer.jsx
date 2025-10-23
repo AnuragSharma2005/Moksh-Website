@@ -113,7 +113,7 @@ const Footer = () => {
   // ];
 
   return (
-    <footer className="bg-foreground text-background">
+    <footer className="min-h-[60vh] bg-moksha-gradient text-background">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-4 gap-12">
@@ -205,8 +205,8 @@ const Footer = () => {
             <div className="space-y-4 mb-8">
               {contactInfo?.map((info, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                    <Icon name={info?.icon} size={16} className="text-primary" />
+                  <div className="w-8 h-8 bg-blue-800 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <Icon name={info?.icon} size={16} className="text-primary " />
                   </div>
                   <div>
                     <div className="text-sm font-medium text-background mb-1">{info?.title}</div>

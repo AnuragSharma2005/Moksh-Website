@@ -5,14 +5,14 @@ const GovernmentAuthSection = () => {
   const certificate = {
     id: 1,
     title: 'Government Digital Services Authorization',
-    issuer: 'Ministry of Electronics & IT',
-    year: '2020',
+    issuer: 'M/o MSME',
+    year: '2025',
     description:
       'Official certification for providing digital services to government entities and public sector organizations.',
-    certificateNumber: 'MEITY/DGS/2020/1247',
-    validUntil: '2025',
+    // certificateNumber: 'MEITY/DGS/2020/1247',
+    validUntil: '2026',
     icon: 'Award',
-    image: 'image.png', // <-- replace with your image path
+    image: 'moksh.png', // <-- replace with your image path
   };
 
   return (
@@ -61,8 +61,8 @@ const GovernmentAuthSection = () => {
                 <span className="font-medium text-gray-800">{certificate.year}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-500">Certificate #:</span>
-                <span className="font-semibold text-gray-900">{certificate.certificateNumber}</span>
+                {/* <span className="text-gray-500">Certificate #:</span> */}
+                {/* <span className="font-semibold text-gray-900">{certificate.certificateNumber}</span> */}
               </div>
             </div>
           </div>
@@ -105,7 +105,7 @@ const GovernmentAuthSection = () => {
     <div className="flex items-center">
       <Icon name="Users" size={20} className="text-blue-400 mr-2 sm:mr-3" />
       <div className="text-left">
-        <div className="text-sm sm:text-lg font-bold text-gray-900">200+</div>
+        {/* <div className="text-sm sm:text-lg font-bold text-gray-900">200+</div> */}
         <div className="text-[10px] sm:text-xs text-gray-500">Trusted Clients</div>
       </div>
     </div>

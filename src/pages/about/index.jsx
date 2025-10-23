@@ -6,7 +6,7 @@ import MissionVisionSection from './components/MissionVisionSection';
 import ValuesSection from './components/ValuesSection';
 import GovernmentAuthSection from './components/GovernmentAuthSection';
 
-import StatsSection from './components/StatsSection';
+// import StatsSection from './components/StatsSection';
 import FloatingActions from '../../components/FloatingActions';
 
 const AboutPage = () => {
@@ -36,7 +36,7 @@ const AboutPage = () => {
         <ValuesSection />
         <GovernmentAuthSection />
       
-        <StatsSection />
+        {/* <StatsSection /> */}
         <FloatingActions />
       </div>
     </>

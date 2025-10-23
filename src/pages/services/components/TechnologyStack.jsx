@@ -305,24 +305,26 @@ const TechnologyStack = () => {
         </motion.div>
 
        {/* Category Tabs */}
-<div className="mb-12">
-  <div className="flex gap-2 overflow-x-auto scrollbar-hide px-2">
-    {Object.entries(techCategories)?.map(([key, category]) => (
-      <button
-        key={key}
-        onClick={() => setActiveCategory(key)}
-        className={`flex-shrink-0 flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-normal ${
-          activeCategory === key
-            ? 'bg-primary text-primary-foreground shadow-medium'
-            : 'bg-card text-foreground border border-border hover:bg-muted hover-lift'
-        }`}
-      >
-        <Icon name={category?.icon} size={20} />
-        <span>{category?.title}</span>
-      </button>
-    ))}
-  </div>
-</div>
+       <div className="mb-12">
+            <div className="flex flex-wrap justify-center gap-3 px-2">
+              {Object.entries(techCategories)?.map(([key, category]) => (
+                <button
+                  key={key}
+                  onClick={() => setActiveCategory(key)}
+                  className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-normal ${
+                    activeCategory === key
+                      ? 'bg-primary text-primary-foreground shadow-medium'
+                      : 'bg-card text-foreground hover:bg-muted hover-lift'
+                  }`}
+                >
+                  <Icon name={category?.icon} size={20} />
+                  <span>{category?.title}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+
 
 
         {/* Active Category Content */}
