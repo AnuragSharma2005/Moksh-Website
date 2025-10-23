@@ -29,24 +29,52 @@ const MissionVisionSection = () => {
   ];
 
   return (
-    <section className="mt-20 py-16 bg-gradient-to-br from-background via-muted/30 to-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold text-black mb-4">
-            Mission & Vision
-          </h2>
-          <p className="text-lg text-black/80 max-w-3xl mx-auto">
-            Moksh - meaning liberation in Sanskrit - reflects our core purpose of freeing businesses from digital limitations
-          </p>
-        </div>
+    <section className="pt-0 bg-gradient-to-br from-background via-muted/30 to-background">
+      {/* Header with animation */}
+      <motion.div
+        className="w-full text-center min-h-[60vh] bg-moksha-gradient text-white flex flex-col justify-center items-center py-24"
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 1,
+          ease: 'easeOut',
+        }}
+      >
+        <motion.h2
+          className="text-3xl md:text-5xl font-headline font-bold mb-4"
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: 'easeOut',
+          }}
+        >
+          Mission & Vision
+        </motion.h2>
+        <motion.p
+          className="text-lg text-gray-200 max-w-3xl"
+          initial={{ y: -30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            delay: 0.6,
+            duration: 0.8,
+            ease: 'easeOut',
+          }}
+        >
+          Moksh — meaning liberation in Sanskrit — reflects our core purpose of freeing
+          businesses from digital limitations and empowering them to achieve true digital
+          transformation.
+        </motion.p>
+      </motion.div>
 
-        {/* Cards */}
+      {/* Cards */}
+      <div className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-10 lg:gap-12">
           {missionVisionData.map((item, idx) => (
             <motion.div
               key={item.id}
-              className="glass-card rounded-xl p-12 shadow-lg hover:shadow-2xl bg-gradient-to-tr from-blue-100 via-blue-200 to-blue-300 transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 cursor-pointer"
+              className="rounded-xl p-12 shadow-lg hover:shadow-2xl bg-gradient-to-tr from-blue-100 via-blue-200 to-blue-300 transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 cursor-pointer"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -81,7 +109,9 @@ const MissionVisionSection = () => {
                     transition={{ type: 'spring', stiffness: 200 }}
                   >
                     <div className="w-2 h-2 bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 rounded-full mr-3"></div>
-                    <span className="text-sm font-medium text-black">{highlight}</span>
+                    <span className="text-sm font-medium text-black">
+                      {highlight}
+                    </span>
                   </motion.div>
                 ))}
               </div>

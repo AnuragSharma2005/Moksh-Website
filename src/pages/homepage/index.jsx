@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import Header from '../../components/ui/Header';
 import HeroSection from './components/HeroSection';
 import ServicesPreview from './components/ServicesPreview';
-import FeaturedCaseStudies from './components/FeaturedCaseStudies';
+// import FeaturedCaseStudies from './components/FeaturedCaseStudies';
 import TeamExpertise from './components/TeamExpertise';
 import TrustIndicators from './components/TrustIndicators';
 import Footer from './components/Footer';
@@ -37,9 +37,10 @@ const Homepage = () => {
         <Header />
         <HeroSection />
         <ServicesPreview />
-        <FeaturedCaseStudies />
-        <TeamExpertise />
+        {/* <FeaturedCaseStudies /> */}
+        
         <TrustIndicators />
+        <TeamExpertise />
         <Footer />
         <FloatingActions />
       </div>

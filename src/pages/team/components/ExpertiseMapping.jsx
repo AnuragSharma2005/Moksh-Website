@@ -1,108 +1,140 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Icon from '../../../components/AppIcon';
+import React from "react";
+import { motion } from "framer-motion";
+import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+
+const teamMembers = [
+  {
+    name: "Aarav Mehta",
+    role: "Lead Developer",
+    qualification: "B.Tech in Computer Science",
+    img: "https://randomuser.me/api/portraits/men/32.jpg",
+  },
+  {
+    name: "Priya Sharma",
+    role: "UI/UX Designer",
+    qualification: "M.Des in Interaction Design",
+    img: "https://randomuser.me/api/portraits/women/45.jpg",
+  },
+  {
+    name: "Rohan Kapoor",
+    role: "Project Manager",
+    qualification: "MBA in Operations",
+    img: "https://randomuser.me/api/portraits/men/76.jpg",
+  },
+  {
+    name: "Neha Verma",
+    role: "Marketing Strategist",
+    qualification: "MA in Digital Marketing",
+    img: "https://randomuser.me/api/portraits/women/66.jpg",
+  },
+];
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.2, duration: 0.8, ease: "easeOut" },
+  }),
+};
 
 const ExpertiseMapping = () => {
-  const expertiseAreas = [
-    {
-      category: "Frontend Development",
-      icon: "Monitor",
-      technologies: ["React", "Next.js", "Vue.js", "Angular", "TypeScript", "Tailwind CSS"],
-      teamMembers: 8,
-      color: "bg-blue-500"
-    },
-    {
-      category: "Backend Development",
-      icon: "Server",
-      technologies: ["Node.js", "Python", "Java", "PHP", "Express", "Django"],
-      teamMembers: 6,
-      color: "bg-green-500"
-    },
-    {
-      category: "Mobile Development",
-      icon: "Smartphone",
-      technologies: ["React Native", "Flutter", "iOS", "Android", "Ionic"],
-      teamMembers: 4,
-      color: "bg-purple-500"
-    },
-    {
-      category: "DevOps & Cloud",
-      icon: "Cloud",
-      technologies: ["AWS", "Docker", "Kubernetes", "CI/CD", "Azure", "GCP"],
-      teamMembers: 3,
-      color: "bg-orange-500"
-    },
-    {
-      category: "UI/UX Design",
-      icon: "Palette",
-      technologies: ["Figma", "Adobe XD", "Sketch", "Photoshop", "Illustrator"],
-      teamMembers: 4,
-      color: "bg-pink-500"
-    },
-    {
-      category: "Database & Analytics",
-      icon: "Database",
-      technologies: ["MongoDB", "PostgreSQL", "MySQL", "Redis", "Firebase"],
-      teamMembers: 5,
-      color: "bg-indigo-500"
-    }
-  ];
-
   return (
-    <div className="bg-card rounded-xl p-8 shadow-subtle border border-border">
-      <div className="text-center mb-8">
-        <h3 className="text-2xl font-headline font-bold text-foreground mb-2">
-          Team Expertise Mapping
-        </h3>
-        <p className="text-muted-foreground">
-          Our collective technical capabilities across different domains
-        </p>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {expertiseAreas?.map((area, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-background rounded-lg p-6 border border-border hover:shadow-medium transition-shadow duration-normal"
-          >
-            <div className="flex items-center mb-4">
-              <div className={`w-10 h-10 ${area?.color} rounded-lg flex items-center justify-center mr-3`}>
-                <Icon name={area?.icon} size={20} className="text-white" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-foreground text-sm">{area?.category}</h4>
-                <p className="text-xs text-muted-foreground">{area?.teamMembers} team members</p>
-              </div>
-            </div>
+    <section className="w-full">
+      {/* 🔵 Top Blue Gradient Section */}
+      <div className="min-h-[60vh] bg-moksha-gradient text-white py-40 px-6 flex flex-col items-center text-center">
+        <motion.h2
+          className="text-4xl md:text-6xl font-extrabold mb-8"
+          initial={{ opacity: 0, y: -40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Meet Our Expert Team
+        </motion.h2>
 
-            <div className="space-y-2">
-              {area?.technologies?.map((tech, techIndex) => (
-                <div
-                  key={techIndex}
-                  className="flex items-center justify-between py-1"
-                >
-                  <span className="text-sm text-foreground">{tech}</span>
-                  <div className="flex space-x-1">
-                    {[...Array(5)]?.map((_, starIndex) => (
-                      <div
-                        key={starIndex}
-                        className={`w-2 h-2 rounded-full ${
-                          starIndex < Math.floor(Math.random() * 2) + 3
-                            ? area?.color
-                            : 'bg-muted'
-                        }`}
-                      />
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        ))}
+        <motion.p
+          className="max-w-3xl text-lg text-gray-200"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4, duration: 1 }}
+        >
+          Our dedicated professionals bring creativity, strategy, and technology together
+          to craft innovative digital experiences for businesses worldwide.
+        </motion.p>
       </div>
-    </div>
+
+      {/* ⚪ Cards Section */}
+      <div className="bg-white py-20 px-6 flex flex-col items-center">
+        <div className="text-center mb-12">
+          <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+            Our Creative Professionals
+          </h3>
+          <p className="text-gray-500 mt-2">
+            Experts who help drive innovation and deliver excellence at every step.
+          </p>
+        </div>
+
+        {/* Cards Grid */}
+        <div className="grid gap-12 md:grid-cols-2 w-full max-w-5xl">
+          {teamMembers.map((member, i) => (
+            <motion.div
+              key={i}
+              className="p-[3px] rounded-3xl bg-gradient-to-br from-[#0a1d5a] via-[#1a3fc4] to-[#4b2ae8] shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.03]"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={i}
+            >
+              {/* Inner white card */}
+              <div className="bg-white rounded-3xl p-8 flex flex-col items-center text-center h-full">
+                {/* Image */}
+                <motion.div
+                  className="w-40 h-40 rounded-2xl overflow-hidden mb-6 border-4 border-blue-500/30 shadow-lg group-hover:border-blue-500 transition-all duration-300"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
+                </motion.div>
+
+                {/* Text Info */}
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  {member.name}
+                </h3>
+                <p className="text-blue-600 font-semibold mb-1">
+                  {member.role}
+                </p>
+                <p className="text-gray-600 italic mb-4">
+                  {member.qualification}
+                </p>
+
+                {/* Social Icons */}
+                <div className="flex space-x-6 mt-4">
+                  {[FaLinkedin, FaTwitter, FaInstagram].map((Icon, idx) => (
+                    <motion.a
+                      key={idx}
+                      href="#"
+                      className="text-gray-400 hover:text-blue-600 transition-all"
+                      whileHover={{ scale: 1.3 }}
+                    >
+                      <Icon size={24} />
+                    </motion.a>
+                  ))}
+                </div>
+
+                {/* Optional Badge */}
+                <div className="absolute bottom-4 right-4 bg-gradient-to-r from-blue-600 to-purple-500 text-white text-xs px-3 py-1 rounded-full shadow-md">
+                  Top Designer
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

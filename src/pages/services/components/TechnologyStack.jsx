@@ -304,23 +304,26 @@ const TechnologyStack = () => {
           </p>
         </motion.div>
 
-        {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {Object.entries(techCategories)?.map(([key, category]) =>
-          <button
-            key={key}
-            onClick={() => setActiveCategory(key)}
-            className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-normal ${
-            activeCategory === key ?
-            'bg-primary text-primary-foreground shadow-medium' :
-            'bg-card text-foreground border border-border hover:bg-muted hover-lift'}`
-            }>
+       {/* Category Tabs */}
+<div className="mb-12">
+  <div className="flex gap-2 overflow-x-auto scrollbar-hide px-2">
+    {Object.entries(techCategories)?.map(([key, category]) => (
+      <button
+        key={key}
+        onClick={() => setActiveCategory(key)}
+        className={`flex-shrink-0 flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-normal ${
+          activeCategory === key
+            ? 'bg-primary text-primary-foreground shadow-medium'
+            : 'bg-card text-foreground border border-border hover:bg-muted hover-lift'
+        }`}
+      >
+        <Icon name={category?.icon} size={20} />
+        <span>{category?.title}</span>
+      </button>
+    ))}
+  </div>
+</div>
 
-              <Icon name={category?.icon} size={20} />
-              <span>{category?.title}</span>
-            </button>
-          )}
-        </div>
 
         {/* Active Category Content */}
         <motion.div
@@ -415,14 +418,6 @@ const TechnologyStack = () => {
 
                 <Icon name="MessageCircle" size={20} className="mr-2" />
                 Discuss Technology Stack
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-primary/30 text-primary hover:bg-primary/5">
-
-                <Icon name="Download" size={20} className="mr-2" />
-                Download Tech Guide
               </Button>
             </div>
           </div>

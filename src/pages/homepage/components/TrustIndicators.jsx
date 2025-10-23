@@ -99,22 +99,22 @@ const TrustIndicators = () => {
 
   const successMetrics = [
   {
-    value: '500+',
+    value: '5+',
     label: 'Projects Delivered',
     icon: 'CheckCircle',
     description: 'Successfully completed projects'
   },
   {
-    value: '98%',
+    value: '99%',
     label: 'Client Satisfaction',
     icon: 'Heart',
     description: 'Average client satisfaction rate'
   },
   {
-    value: '₹50Cr+',
-    label: 'Value Generated',
+    value: '5+',
+    label: 'Happy Clients',
     icon: 'TrendingUp',
-    description: 'Total client value created'
+    description: 'Businesses empowered through technology'
   },
   {
     value: '24/7',
@@ -145,7 +145,7 @@ const TrustIndicators = () => {
         </motion.div>
 
         {/* Client Logos Carousel */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
@@ -177,7 +177,7 @@ const TrustIndicators = () => {
               )}
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Success Metrics */}
         <motion.div
@@ -200,7 +200,7 @@ const TrustIndicators = () => {
         </motion.div>
 
         {/* Certifications */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -221,7 +221,7 @@ const TrustIndicators = () => {
               </div>
             )}
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Client Testimonials */}
         <motion.div
@@ -277,7 +277,7 @@ const TrustIndicators = () => {
         </motion.div>
 
         {/* Government Authorization Badge */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
@@ -313,7 +313,7 @@ const TrustIndicators = () => {
               </span>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>);
 

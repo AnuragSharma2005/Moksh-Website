@@ -47,7 +47,7 @@ const HeroSection = () => {
             className="text-center lg:text-left">
 
             {/* Government Badge */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -55,7 +55,7 @@ const HeroSection = () => {
 
               <Icon name="Shield" size={16} className="text-trust" />
               <span className="text-sm font-medium text-trust">Government Authorized Digital Partner</span>
-            </motion.div>
+            </motion.div> */}
 
             {/* Main Headline */}
             <motion.h1
@@ -81,25 +81,26 @@ const HeroSection = () => {
             </motion.p>
 
             {/* Service Icons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+          <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.8 }}
+  className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8 p-6 rounded-2xl bg-moksha-gradient shadow-lg backdrop-blur-xl border border-white/20"
+>
+  {services?.map((service, index) => (
+    <div
+      key={index}
+      className="glass-card rounded-lg p-4 text-center hover-scale cursor-pointer bg-white/10 hover:bg-white/20 transition-all"
+    >
+      <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+        <Icon name={service?.icon} size={24} className="text-accent" />
+      </div>
+      <h3 className="font-medium text-white text-sm mb-1">{service?.title}</h3>
+      <p className="text-xs text-white/70">{service?.description}</p>
+    </div>
+  ))}
+</motion.div>
 
-              {services?.map((service, index) =>
-              <div
-                key={index}
-                className="glass-card rounded-lg p-4 text-center hover-scale cursor-pointer">
-
-                  <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mx-auto mb-2">
-                    <Icon name={service?.icon} size={24} className="text-accent" />
-                  </div>
-                  <h3 className="font-medium text-white text-sm mb-1">{service?.title}</h3>
-                  <p className="text-xs text-white/70">{service?.description}</p>
-                </div>
-              )}
-            </motion.div>
 
             {/* CTA Buttons */}
             <motion.div
@@ -134,7 +135,7 @@ const HeroSection = () => {
             </motion.div>
 
             {/* Trust Indicators */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 1.2 }}
@@ -152,7 +153,7 @@ const HeroSection = () => {
                 <Icon name="CheckCircle" size={16} />
                 <span className="text-sm">100% Success Rate</span>
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* Right Content - Hero Image */}

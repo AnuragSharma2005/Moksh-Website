@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import Header from '../../components/ui/Header';
 import ServiceHero from './components/ServiceHero';
 import ServiceCard from './components/ServiceCard';
-import ServiceComparison from './components/ServiceComparison';
+// import ServiceComparison from './components/ServiceComparison';
 import TechnologyStack from './components/TechnologyStack';
 import ProcessTimeline from './components/ProcessTimeline';
 import ServiceTestimonials from './components/ServiceTestimonials';
@@ -68,32 +68,32 @@ const ServicesPage = () => {
         'Testing & Store Submission'
       ]
     },
-    {
-      id: 'ecommerce-platform',
-      title: 'E-commerce Platform',
-      icon: 'ShoppingCart',
-      description: 'Launch your online store with powerful e-commerce solutions. Complete with payment gateways, inventory management, and customer analytics to grow your business.',
-      features: [
-        'Multi-payment gateway integration',
-        'Inventory management system',
-        'Order tracking & management',
-        'Customer analytics dashboard',
-        'Mobile-responsive design',
-        'SEO & marketing tools'
-      ],
-      technologies: ['Next.js', 'Stripe', 'PayPal', 'PostgreSQL', 'Redis', 'AWS'],
-      startingPrice: '₹50,000',
-      timeline: '4-8 weeks',
-      isPopular: false,
-      badge: 'Revenue Boost',
-      cardColor: 'green',
-      process: [
-        'Business Analysis',
-        'Platform Setup',
-        'Payment Integration',
-        'Launch & Marketing'
-      ]
-    },
+    // {
+    //   id: 'ecommerce-platform',
+    //   title: 'E-commerce Platform',
+    //   icon: 'ShoppingCart',
+    //   description: 'Launch your online store with powerful e-commerce solutions. Complete with payment gateways, inventory management, and customer analytics to grow your business.',
+    //   features: [
+    //     'Multi-payment gateway integration',
+    //     'Inventory management system',
+    //     'Order tracking & management',
+    //     'Customer analytics dashboard',
+    //     'Mobile-responsive design',
+    //     'SEO & marketing tools'
+    //   ],
+    //   technologies: ['Next.js', 'Stripe', 'PayPal', 'PostgreSQL', 'Redis', 'AWS'],
+    //   startingPrice: '₹50,000',
+    //   timeline: '4-8 weeks',
+    //   isPopular: false,
+    //   badge: 'Revenue Boost',
+    //   cardColor: 'green',
+    //   process: [
+    //     'Business Analysis',
+    //     'Platform Setup',
+    //     'Payment Integration',
+    //     'Launch & Marketing'
+    //   ]
+    // },
     {
       id: 'branding-uiux',
       title: 'Branding & UI/UX',
@@ -172,32 +172,32 @@ const ServicesPage = () => {
         'Publishing & Promotion'
       ]
     },
-    {
-      id: 'government-platforms',
-      title: 'Government Platforms',
-      icon: 'Shield',
-      description: 'Develop secure, compliant digital solutions for government and public sector organizations. Built with highest security standards and regulatory compliance.',
-      features: [
-        'Government compliance standards',
-        'Advanced security protocols',
-        'Accessibility compliance',
-        'Data privacy protection',
-        'Audit trail systems',
-        'Multi-language support'
-      ],
-      technologies: ['Angular', 'Spring Boot', 'Oracle', 'PostgreSQL', 'Docker', 'Kubernetes'],
-      startingPrice: '₹1,20,000',
-      timeline: '8-16 weeks',
-      isPopular: false,
-      badge: 'Authorized Partner',
-      cardColor: 'indigo',
-      process: [
-        'Compliance Assessment',
-        'Security Architecture',
-        'Development & Testing',
-        'Certification & Deployment'
-      ]
-    },
+    // {
+    //   id: 'government-platforms',
+    //   title: 'Government Platforms',
+    //   icon: 'Shield',
+    //   description: 'Develop secure, compliant digital solutions for government and public sector organizations. Built with highest security standards and regulatory compliance.',
+    //   features: [
+    //     'Government compliance standards',
+    //     'Advanced security protocols',
+    //     'Accessibility compliance',
+    //     'Data privacy protection',
+    //     'Audit trail systems',
+    //     'Multi-language support'
+    //   ],
+    //   technologies: ['Angular', 'Spring Boot', 'Oracle', 'PostgreSQL', 'Docker', 'Kubernetes'],
+    //   startingPrice: '₹1,20,000',
+    //   timeline: '8-16 weeks',
+    //   isPopular: false,
+    //   badge: 'Authorized Partner',
+    //   cardColor: 'indigo',
+    //   process: [
+    //     'Compliance Assessment',
+    //     'Security Architecture',
+    //     'Development & Testing',
+    //     'Certification & Deployment'
+    //   ]
+    // },
     {
       id: 'maintenance-support',
       title: 'Maintenance & Support',
@@ -272,7 +272,7 @@ const ServicesPage = () => {
         </section>
 
         {/* Service Comparison */}
-        <ServiceComparison />
+        {/* <ServiceComparison /> */}
 
         {/* Technology Stack */}
         <TechnologyStack />

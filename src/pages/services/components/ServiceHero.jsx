@@ -50,18 +50,18 @@ const ServiceHero = () => {
               Schedule Consultation
             </Button>
             
-            <Button
+            {/* <Button
               variant="outline"
               size="lg"
               className="border-white/30 text-white hover:bg-white/10 font-medium px-8 py-4"
             >
               <Icon name="Play" size={20} className="mr-2" />
               View Our Work
-            </Button>
+            </Button> */}
           </motion.div>
 
           {/* Stats */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -82,7 +82,7 @@ const ServiceHero = () => {
                 </div>
               </div>
             ))}
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </section>

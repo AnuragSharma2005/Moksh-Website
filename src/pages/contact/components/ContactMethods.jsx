@@ -11,7 +11,7 @@ const ContactMethods = () => {
       methods: [
         {
           type: "WhatsApp",
-          value: "+91 98765 43210",
+          value: "+91 98776 53180",
           icon: "MessageCircle",
           action: "Chat Now",
           primary: true,
@@ -19,7 +19,7 @@ const ContactMethods = () => {
         },
         {
           type: "Phone Call",
-          value: "+91 98765 43210",
+          value: "+91 98776 53180",
           icon: "Phone",
           action: "Call Now",
           primary: true,
@@ -34,7 +34,7 @@ const ContactMethods = () => {
       methods: [
         {
           type: "Email",
-          value: "hello@mokshdigital.com",
+          value: "mokshdigitalco@gmail.com",
           icon: "Mail",
           action: "Send Email",
           primary: false,
@@ -42,7 +42,7 @@ const ContactMethods = () => {
         },
         {
           type: "Business Email",
-          value: "business@mokshdigital.com",
+          value: "mokshdigitalco@gmail.com",
           icon: "Briefcase",
           action: "Send Inquiry",
           primary: false,
@@ -65,7 +65,7 @@ const ContactMethods = () => {
         },
         {
           type: "Office Visit",
-          value: "Pune, Maharashtra",
+          value: "DeraBassi, Punjab",
           icon: "MapPin",
           action: "Book Visit",
           primary: false,
@@ -81,21 +81,29 @@ const ContactMethods = () => {
         window.open(`https://wa.me/919876543210?text=Hi! I'm interested in your digital services.`, '_blank');
         break;
       case "Phone Call":
-        window.open(`tel:+919876543210`, '_self');
+        window.location.href = `tel:+919876543210`;
         break;
-      case "Email": case"Business Email":
-        window.open(`mailto:${method?.value}?subject=Digital Services Inquiry`, '_self');
+      case "Email":
+      case "Business Email":
+        window.location.href = `mailto:${method?.value}?subject=Digital Services Inquiry`;
+        break;
+      case "Video Call":
+        // Make a call (replace with actual number if needed)
+        window.location.href = `tel:+919876543210`;
+        break;
+      case "Office Visit":
+        // Scroll to form
+        const form = document.getElementById('contact-form');
+        if (form) form.scrollIntoView({ behavior: 'smooth' });
         break;
       default:
-        // For scheduling methods, scroll to contact form
-        document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+        console.warn("Action not defined for:", method?.type);
     }
   };
 
   return (
     <section className="py-16 lg:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground mb-4">
             Choose Your Preferred Way to Connect
@@ -106,11 +114,9 @@ const ContactMethods = () => {
           </p>
         </div>
 
-        {/* Contact Methods Grid */}
         <div className="grid lg:grid-cols-3 gap-8">
           {contactMethods?.map((category) => (
             <div key={category?.id} className="bg-card rounded-xl p-6 shadow-subtle hover-lift">
-              {/* Category Header */}
               <div className="mb-6">
                 <h3 className="font-headline text-xl font-semibold text-foreground mb-2">
                   {category?.title}
@@ -120,14 +126,14 @@ const ContactMethods = () => {
                 </p>
               </div>
 
-              {/* Methods List */}
               <div className="space-y-4">
                 {category?.methods?.map((method, index) => (
                   <div 
                     key={index}
                     className={`p-4 rounded-lg border transition-all duration-normal hover:shadow-medium ${
                       method?.primary 
-                        ? 'border-primary bg-primary/5 hover:bg-primary/10' :'border-border bg-muted/30 hover:bg-muted/50'
+                        ? 'border-primary bg-primary/5 hover:bg-primary/10' 
+                        : 'border-border bg-muted/30 hover:bg-muted/50'
                     }`}
                   >
                     <div className="flex items-start justify-between mb-3">
@@ -163,28 +169,6 @@ const ContactMethods = () => {
             </div>
           ))}
         </div>
-
-        {/* Emergency Contact */}
-        {/* <div className="mt-12 bg-conversion/10 border border-conversion/20 rounded-xl p-6 text-center">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <Icon name="AlertCircle" size={24} className="text-conversion" />
-            <h3 className="font-headline text-lg font-semibold text-foreground">
-              Urgent Project Requirements?
-            </h3>
-          </div>
-          <p className="font-body text-muted-foreground mb-4">
-            For time-sensitive projects or emergency support, reach out directly to our priority line.
-          </p>
-          <Button
-            variant="default"
-            className="bg-conversion hover:bg-conversion/90 text-conversion-foreground font-cta"
-            iconName="Zap"
-            iconPosition="left"
-            onClick={() => window.open('tel:+919876543210', '_self')}
-          >
-            Priority Support: +91 98765 43210
-          </Button>
-        </div> */}
       </div>
     </section>
   );

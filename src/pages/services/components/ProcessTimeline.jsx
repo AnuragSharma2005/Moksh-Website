@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Icon from '../../../components/AppIcon';
 
 const ProcessTimeline = () => {
   const [activeStep, setActiveStep] = useState(0);
+  const leftColumnRef = useRef(null);
+  const [leftHeight, setLeftHeight] = useState(0);
 
   const processSteps = [
     {
@@ -128,6 +130,13 @@ const ProcessTimeline = () => {
     }
   ];
 
+  // Measure left column height to match right card
+  useEffect(() => {
+    if (leftColumnRef.current) {
+      setLeftHeight(leftColumnRef.current.offsetHeight);
+    }
+  }, [activeStep]);
+
   return (
     <section className="py-16 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -146,9 +155,9 @@ const ProcessTimeline = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Timeline Navigation */}
-          <div className="space-y-4">
+        <div className="flex flex-col lg:flex-row gap-12 items-stretch">
+          {/* Timeline Steps */}
+          <div ref={leftColumnRef} className="flex flex-col gap-4 w-full lg:w-1/2">
             {processSteps?.map((step, index) => (
               <motion.div
                 key={step?.id}
@@ -161,13 +170,12 @@ const ProcessTimeline = () => {
                 }`}
                 onClick={() => setActiveStep(index)}
               >
-                <div className={`glass-card rounded-xl p-6 border transition-all duration-normal ${
+                <div className={`glass-card rounded-xl p-6 border h-full transition-all duration-normal ${
                   activeStep === index
                     ? 'border-primary bg-primary/5 shadow-elevated'
                     : 'border-border/50 hover:border-primary/30'
                 }`}>
                   <div className="flex items-center space-x-4">
-                    {/* Step Number & Icon */}
                     <div className="flex-shrink-0">
                       <div className={`w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-normal ${
                         activeStep === index
@@ -178,7 +186,6 @@ const ProcessTimeline = () => {
                       </div>
                     </div>
 
-                    {/* Step Content */}
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
                         <h3 className={`font-headline font-bold transition-colors duration-normal ${
@@ -194,15 +201,6 @@ const ProcessTimeline = () => {
                         {step?.description}
                       </p>
                     </div>
-
-                    {/* Active Indicator */}
-                    {activeStep === index && (
-                      <motion.div
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        className="w-3 h-3 bg-primary rounded-full"
-                      />
-                    )}
                   </div>
                 </div>
               </motion.div>
@@ -215,7 +213,8 @@ const ProcessTimeline = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="glass-card rounded-xl p-8 border border-primary/20 bg-card"
+            className="glass-card rounded-xl p-8 border border-primary/20 bg-card w-full lg:w-1/2"
+            style={{ minHeight: leftHeight }}
           >
             <div className="mb-6">
               <div className="flex items-center space-x-3 mb-4">
@@ -279,60 +278,7 @@ const ProcessTimeline = () => {
                 ))}
               </div>
             </div>
-
-            {/* Progress Indicator */}
-            <div className="mt-6 pt-6 border-t border-border">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-sm font-medium text-foreground">
-                  Step {activeStep + 1} of {processSteps?.length}
-                </span>
-                <span className="text-sm text-muted-foreground">
-                  {Math.round(((activeStep + 1) / processSteps?.length) * 100)}% Complete
-                </span>
-              </div>
-              <div className="w-full bg-muted rounded-full h-2">
-                <motion.div
-                  initial={{ width: 0 }}
-                  animate={{ width: `${((activeStep + 1) / processSteps?.length) * 100}%` }}
-                  transition={{ duration: 0.5 }}
-                  className="bg-primary h-2 rounded-full"
-                />
-              </div>
-            </div>
           </motion.div>
-        </div>
-
-        {/* Navigation Controls */}
-        <div className="flex items-center justify-center space-x-4 mt-8">
-          <button
-            onClick={() => setActiveStep(Math.max(0, activeStep - 1))}
-            disabled={activeStep === 0}
-            className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-border text-foreground hover:bg-muted disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-normal"
-          >
-            <Icon name="ChevronLeft" size={16} />
-            <span>Previous</span>
-          </button>
-          
-          <div className="flex space-x-2">
-            {processSteps?.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveStep(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-normal ${
-                  activeStep === index ? 'bg-primary' : 'bg-muted hover:bg-muted-foreground/30'
-                }`}
-              />
-            ))}
-          </div>
-
-          <button
-            onClick={() => setActiveStep(Math.min(processSteps?.length - 1, activeStep + 1))}
-            disabled={activeStep === processSteps?.length - 1}
-            className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-border text-foreground hover:bg-muted disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-normal"
-          >
-            <span>Next</span>
-            <Icon name="ChevronRight" size={16} />
-          </button>
         </div>
       </div>
     </section>

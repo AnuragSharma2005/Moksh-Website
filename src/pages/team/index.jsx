@@ -2,11 +2,12 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import Header from '../../components/ui/Header';
 import TeamMemberCard from './components/TeamMemberCard';
-import TeamStats from './components/TeamStats';
+// import TeamStats from './components/TeamStats';
 import ExpertiseMapping from './components/ExpertiseMapping';
-import TeamCulture from './components/TeamCulture';
-import OrganizationChart from './components/OrganizationChart';
+// import TeamCulture from './components/TeamCulture';
+// import OrganizationChart from './components/OrganizationChart';
 import FloatingActions from '../../components/FloatingActions';
+
 
 const TeamPage = () => {
   useEffect(() => {
@@ -30,10 +31,10 @@ const TeamPage = () => {
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
-        <TeamStats />
+        {/* <TeamStats /> */}
         <ExpertiseMapping />
-        <TeamCulture />
-        <OrganizationChart />
+        {/* <TeamCulture /> */}
+        {/* <OrganizationChart /> */}
         <FloatingActions />
       </div>
     </>

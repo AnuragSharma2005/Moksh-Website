@@ -21,28 +21,10 @@ const ServiceCTA = () => {
     { value: 'mobile', label: 'Mobile App Development' },
     { value: 'ecommerce', label: 'E-commerce Platform' },
     { value: 'branding', label: 'Branding & UI/UX' },
-    { value: 'government', label: 'Government Platform' },
     { value: 'maintenance', label: 'Maintenance & Support' },
     { value: 'consultation', label: 'Technical Consultation' }
   ];
 
-  const budgetOptions = [
-    { value: '25k-50k', label: '₹25,000 - ₹50,000' },
-    { value: '50k-100k', label: '₹50,000 - ₹1,00,000' },
-    { value: '100k-250k', label: '₹1,00,000 - ₹2,50,000' },
-    { value: '250k-500k', label: '₹2,50,000 - ₹5,00,000' },
-    { value: '500k+', label: '₹5,00,000+' },
-    { value: 'discuss', label: 'Let\'s Discuss' }
-  ];
-
-  const timelineOptions = [
-    { value: '1-2weeks', label: '1-2 weeks' },
-    { value: '3-4weeks', label: '3-4 weeks' },
-    { value: '1-2months', label: '1-2 months' },
-    { value: '3-6months', label: '3-6 months' },
-    { value: '6months+', label: '6+ months' },
-    { value: 'flexible', label: 'Flexible timeline' }
-  ];
 
   const handleInputChange = (field, value) => {
     setFormData(prev => ({
@@ -62,24 +44,24 @@ const ServiceCTA = () => {
       icon: 'Phone',
       title: 'Call Us',
       description: 'Speak directly with our experts',
-      value: '+91 98765 43210',
-      action: 'tel:+919876543210',
+      value: '+91 9877653180',
+      action: 'tel:+919877653180',
       color: 'text-success'
     },
     {
       icon: 'Mail',
       title: 'Email Us',
       description: 'Get detailed project proposals',
-      value: 'hello@mokshdigital.com',
-      action: 'mailto:hello@mokshdigital.com',
+      value: 'mokshdigitalco@gmail.com',
+      action: 'mailto:mokshdigitalco@gmail.com',
       color: 'text-primary'
     },
     {
       icon: 'MessageCircle',
       title: 'WhatsApp',
       description: 'Quick chat for instant queries',
-      value: '+91 98765 43210',
-      action: 'https://wa.me/919876543210',
+      value: '+91 98776 53180',
+      action: 'https://wa.me/919877653180',
       color: 'text-success'
     },
     {
@@ -172,23 +154,7 @@ const ServiceCTA = () => {
                 required
               />
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <Select
-                  label="Budget Range"
-                  placeholder="Select budget"
-                  options={budgetOptions}
-                  value={formData?.budget}
-                  onChange={(value) => handleInputChange('budget', value)}
-                />
-                <Select
-                  label="Timeline"
-                  placeholder="Select timeline"
-                  options={timelineOptions}
-                  value={formData?.timeline}
-                  onChange={(value) => handleInputChange('timeline', value)}
-                />
-              </div>
-
+             
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">
                   Project Details
@@ -228,89 +194,52 @@ const ServiceCTA = () => {
             className="space-y-6"
           >
             <div className="glass-card rounded-xl p-6 border border-white/20">
-              <h3 className="font-headline text-xl font-bold text-white mb-4">
+              <h3 className="font-headline text-xl font-bold text-black mb-4">
                 Prefer Direct Contact?
               </h3>
-              <p className="font-body text-white/80 mb-6">
+              <p className="font-body text-black/80 mb-6">
                 Choose your preferred way to connect with our team. We're here to help you succeed.
               </p>
 
               <div className="space-y-4">
                 {contactMethods?.map((method, index) => (
-                  <motion.a
-                    key={index}
-                    href={method?.action}
-                    target={method?.action?.startsWith('http') ? '_blank' : '_self'}
-                    rel={method?.action?.startsWith('http') ? 'noopener noreferrer' : ''}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="flex items-center space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-normal hover-lift group"
-                  >
-                    <div className={`w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-normal`}>
-                      <Icon name={method?.icon} size={24} className="text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-headline font-bold text-white mb-1">
-                        {method?.title}
-                      </h4>
-                      <p className="text-sm text-white/70 mb-1">
-                        {method?.description}
-                      </p>
-                      <p className="text-sm font-medium text-accent">
-                        {method?.value}
-                      </p>
-                    </div>
-                    <Icon name="ExternalLink" size={16} className="text-white/60 group-hover:text-white transition-colors duration-normal" />
-                  </motion.a>
-                ))}
-              </div>
+          <motion.a
+            key={index}
+            href={method?.action}
+            target={method?.action?.startsWith('http') ? '_blank' : '_self'}
+            rel={method?.action?.startsWith('http') ? 'noopener noreferrer' : ''}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className="flex items-center space-x-4 p-4 bg-white backdrop-blur-sm rounded-lg hover:bg-gray-100 transition-all duration-normal hover-lift group"
+          >
+            <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-normal">
+              <Icon name={method?.icon} size={24} className="text-black" />
             </div>
-
-            {/* Quick Stats */}
-            <div className="glass-card rounded-xl p-6 border border-white/20">
-              <h4 className="font-headline font-bold text-white mb-4 text-center">
-                Why Choose Moksh Digital?
+            <div className="flex-1">
+              <h4 className="font-headline font-bold text-black mb-1">
+                {method?.title}
               </h4>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { number: '24hrs', label: 'Response Time' },
-                  { number: '150+', label: 'Projects Delivered' },
-                  { number: '98%', label: 'Client Satisfaction' },
-                  { number: '5+', label: 'Years Experience' }
-                ]?.map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="font-headline text-xl font-bold text-accent mb-1">
-                      {stat?.number}
-                    </div>
-                    <div className="font-body text-xs text-white/80">
-                      {stat?.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Government Authorization Badge */}
-            <div className="glass-card rounded-xl p-6 border border-accent/30 bg-accent/10">
-              <div className="flex items-center space-x-3 mb-3">
-                <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
-                  <Icon name="Shield" size={20} className="text-accent-foreground" />
-                </div>
-                <div>
-                  <h4 className="font-headline font-bold text-white">
-                    Government Authorized
-                  </h4>
-                  <p className="text-sm text-white/80">
-                    Certified Digital Partner
-                  </p>
-                </div>
-              </div>
-              <p className="text-sm text-white/70">
-                We are an authorized government digital service provider, ensuring compliance and security in all our solutions.
+              <p className="text-sm text-gray-700 mb-1">
+                {method?.description}
+              </p>
+              <p className="text-sm font-medium text-primary">
+                {method?.value}
               </p>
             </div>
+            <Icon
+              name="ExternalLink"
+              size={16}
+              className="text-gray-500 group-hover:text-black transition-colors duration-normal"
+            />
+          </motion.a>
+
+                ))}
+              </div>
+            </div>
+
+           
           </motion.div>
         </div>
       </div>

@@ -42,50 +42,50 @@ const Footer = () => {
     {
       name: 'LinkedIn',
       icon: 'Linkedin',
-      url: 'https://linkedin.com/company/mokshdigital',
+      url: 'https://www.linkedin.com/in/moksh-digital-29b696384/',
       color: 'hover:text-blue-600'
     },
-    {
-      name: 'Twitter',
-      icon: 'Twitter',
-      url: 'https://twitter.com/mokshdigital',
-      color: 'hover:text-blue-400'
-    },
-    {
-      name: 'Facebook',
-      icon: 'Facebook',
-      url: 'https://facebook.com/mokshdigital',
-      color: 'hover:text-blue-700'
-    },
+    // {
+    //   name: 'Twitter',
+    //   icon: 'Twitter',
+    //   url: 'https://twitter.com/mokshdigital',
+    //   color: 'hover:text-blue-400'
+    // },
+    // {
+    //   name: 'Facebook',
+    //   icon: 'Facebook',
+    //   url: 'https://facebook.com/mokshdigital',
+    //   color: 'hover:text-blue-700'
+    // },
     {
       name: 'Instagram',
       icon: 'Instagram',
-      url: 'https://instagram.com/mokshdigital',
+      url: 'https://www.instagram.com/moksh.digital?igsh=aDQ2YzY1bHU0YnNx',
       color: 'hover:text-pink-600'
     },
-    {
-      name: 'YouTube',
-      icon: 'Youtube',
-      url: 'https://youtube.com/mokshdigital',
-      color: 'hover:text-red-600'
-    }
+    // {
+    //   name: 'YouTube',
+    //   icon: 'Youtube',
+    //   url: 'https://youtube.com/mokshdigital',
+    //   color: 'hover:text-red-600'
+    // }
   ];
 
   const contactInfo = [
     {
       icon: 'MapPin',
       title: 'Address',
-      content: 'Tech Hub, Sector 62, Noida, Uttar Pradesh 201309, India'
+      content: 'Dera-Bassi , Punjab , India'
     },
     {
       icon: 'Phone',
       title: 'Phone',
-      content: '+91 98765 43210'
+      content: '+91 98776 53180'
     },
     {
       icon: 'Mail',
       title: 'Email',
-      content: 'hello@mokshdigital.com'
+      content: 'mokshdigitalco@gmail.com'
     },
     {
       icon: 'Clock',
@@ -94,23 +94,23 @@ const Footer = () => {
     }
   ];
 
-  const certifications = [
-    {
-      name: 'Government Authorized',
-      icon: 'Shield',
-      description: 'Certified Digital Partner'
-    },
-    {
-      name: 'ISO 27001',
-      icon: 'Lock',
-      description: 'Security Certified'
-    },
-    {
-      name: 'AWS Partner',
-      icon: 'Cloud',
-      description: 'Cloud Solutions'
-    }
-  ];
+  // const certifications = [
+  //   {
+  //     name: 'Government Authorized',
+  //     icon: 'Shield',
+  //     description: 'Certified Digital Partner'
+  //   },
+  //   {
+  //     name: 'ISO 27001',
+  //     icon: 'Lock',
+  //     description: 'Security Certified'
+  //   },
+  //   {
+  //     name: 'AWS Partner',
+  //     icon: 'Cloud',
+  //     description: 'Cloud Solutions'
+  //   }
+  // ];
 
   return (
     <footer className="bg-foreground text-background">
@@ -150,7 +150,7 @@ const Footer = () => {
             </p>
 
             {/* Certifications */}
-            <div className="space-y-3">
+            {/* <div className="space-y-3">
               <h4 className="font-semibold text-background mb-3">Certifications</h4>
               {certifications?.map((cert, index) => (
                 <div key={index} className="flex items-center space-x-3">
@@ -163,7 +163,7 @@ const Footer = () => {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Footer Links */}
@@ -236,7 +236,7 @@ const Footer = () => {
             </div>
 
             {/* Newsletter Signup */}
-            <div className="mt-8 p-4 bg-background/5 rounded-lg border border-background/10">
+            {/* <div className="mt-8 p-4 bg-background/5 rounded-lg border border-background/10">
               <h4 className="font-semibold text-background mb-2">Stay Updated</h4>
               <p className="text-sm text-background/70 mb-3">
                 Get the latest updates on digital transformation trends.
@@ -251,22 +251,22 @@ const Footer = () => {
                   Subscribe
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
       {/* Bottom Bar */}
-      <div className="border-t border-background/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            {/* Copyright */}
-            <div className="text-sm text-background/60">
-              © {currentYear} Moksh Digital. All rights reserved. | 
-              <span className="ml-1">Government Authorized Digital Service Provider</span>
-            </div>
+     <div className="border-t border-background/10">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div className="flex flex-col md:flex-row justify-center items-center text-center space-y-4 md:space-y-0">
+      {/* Copyright */}
+      <div className="text-sm text-background/60">
+        © {currentYear} Moksh Digital. All rights reserved. | 
+        <span className="ml-1">Authorized Digital Service Provider</span>
+      </div>
 
             {/* Legal Links */}
-            <div className="flex items-center space-x-6 text-sm">
+            {/* <div className="flex items-center space-x-6 text-sm">
               <Link 
                 to="/contact" 
                 className="text-background/60 hover:text-accent transition-colors"
@@ -285,13 +285,13 @@ const Footer = () => {
               >
                 Cookie Policy
               </Link>
-            </div>
+            </div> */}
 
             {/* Government Badge */}
-            <div className="flex items-center space-x-2 text-sm">
+            {/* <div className="flex items-center space-x-2 text-sm">
               <Icon name="Shield" size={16} className="text-trust" />
               <span className="text-background/70">Government Authorized</span>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -301,15 +301,15 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-conversion-foreground">
             <div className="flex items-center space-x-2">
               <Icon name="Phone" size={16} />
-              <span className="text-sm font-medium">24/7 Support: +91 98765 43210</span>
+              <span className="text-sm font-medium">24/7 Support: +91 98776 53180</span>
             </div>
             <div className="flex items-center space-x-2">
               <Icon name="MessageCircle" size={16} />
-              <span className="text-sm font-medium">WhatsApp: +91 98765 43210</span>
+              <span className="text-sm font-medium">WhatsApp: +91 98776 53180</span>
             </div>
             <div className="flex items-center space-x-2">
               <Icon name="Mail" size={16} />
-              <span className="text-sm font-medium">Email: hello@mokshdigital.com</span>
+              <span className="text-sm font-medium">Email: mokshdigitalco@gmail.com</span>
             </div>
           </div>
         </div>

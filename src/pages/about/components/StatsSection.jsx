@@ -101,7 +101,7 @@ const StatsSection = () => {
   {statsData?.map((stat) => (
     <div 
       key={stat?.key}
-      className="text-center rounded-xl p-6 hover-scale transition-all duration-300  bg-gradient-to-tr from-blue-300 via-blue-400 to-blue-500 text-white shadow-lg"
+      className="text-center rounded-xl p-6 hover-scale transition-all duration-300  bg-#412B6B text-white shadow-lg"
     >
       <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
         <Icon name={stat?.icon} size={32} className="text-white" />
@@ -126,7 +126,7 @@ const StatsSection = () => {
         {/* Additional Metrics */}
         <div className="mt-12 grid md:grid-cols-3 gap-6">
   <div className="text-center rounded-xl p-6 transition-all duration-300 
-                  bg-gradient-to-tr from-blue-300 via-blue-400 to-blue-500
+                  bg-412B6B
                   shadow-xl border border-blue-500/20 hover:shadow-blue-500/40 hover:scale-105">
     <Icon name="Clock" size={24} className="text-white mx-auto mb-3" />
     <div className="text-2xl font-bold text-white mb-1">24/7</div>
@@ -134,7 +134,7 @@ const StatsSection = () => {
   </div>
 
   <div className="text-center rounded-xl p-6 transition-all duration-300 
-                   bg-gradient-to-tr from-blue-300 via-blue-400 to-blue-500
+                  bg-#412B6B
                   shadow-xl border border-blue-500/20 hover:shadow-blue-500/40 hover:scale-105">
     <Icon name="Zap" size={24} className="text-white mx-auto mb-3" />
     <div className="text-2xl font-bold text-white mb-1">&lt;48hrs</div>
@@ -142,7 +142,7 @@ const StatsSection = () => {
   </div>
 
   <div className="text-center rounded-xl p-6 transition-all duration-300 
-                 bg-gradient-to-tr from-blue-300 via-blue-400 to-blue-500
+                 bg-#412B6B
                   shadow-xl border border-blue-500/20 hover:shadow-blue-500/40 hover:scale-105">
     <Icon name="Shield" size={24} className="text-white mx-auto mb-3" />
     <div className="text-2xl font-bold text-white mb-1">100%</div>

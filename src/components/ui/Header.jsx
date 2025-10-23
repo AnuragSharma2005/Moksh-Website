@@ -65,14 +65,15 @@ const Header = () => {
               </div>
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-accent rounded-full animate-pulse-soft"></div>
             </div>
-            <div className="flex flex-col">
-              <span className="font-headline text-lg font-bold text-foreground">
-                Moksh Digital
-              </span>
-              <span className="font-accent text-xs text-muted-foreground tracking-wide">
-                Digital Liberation
-              </span>
-            </div>
+            <div className="flex flex-col bg-blue-600 rounded-md px-3 py-1">
+  <span className="font-headline text-lg font-bold text-white">
+    Moksh Digital
+  </span>
+  <span className="font-accent text-xs text-white/90 tracking-wide">
+    Digital Liberation
+  </span>
+</div>
+
           </Link>
 
           {/* Desktop Navigation */}
@@ -168,10 +169,10 @@ const Header = () => {
             <div className="w-8 h-8 bg-trust rounded-full flex items-center justify-center">
               <Icon name="Shield" size={16} className="text-trust-foreground" />
             </div>
-            <div>
+            {/* <div>
               <p className="text-xs font-semibold text-foreground">Government Authorized</p>
               <p className="text-xs text-muted-foreground">Digital Partner</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
