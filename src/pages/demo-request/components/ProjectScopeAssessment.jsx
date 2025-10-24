@@ -76,7 +76,7 @@ const DemoRequestForm = () => {
   ];
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center p-4 ">
       <div className="bg-white border-2 border-blue-500 rounded-2xl shadow-lg w-full max-w-3xl p-6 sm:p-8">
         <h1 className="text-2xl sm:text-3xl font-bold text-center mb-6 text-blue-700">
           Request Your Demo

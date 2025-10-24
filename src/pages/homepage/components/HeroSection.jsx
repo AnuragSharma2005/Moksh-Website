@@ -167,7 +167,7 @@ const HeroSection = () => {
               {/* Main Hero Image */}
               <div className="relative z-10 glass-card rounded-2xl overflow-hidden shadow-elevated hover-lift">
                 <Image
-                  src="https://images.unsplash.com/photo-1531537264351-c1952d1db1f5"
+                  src="Homepage.jpg"
                   alt="Modern office workspace with diverse team collaborating on digital projects using laptops and tablets"
                   className="w-full h-96 object-cover" />
 

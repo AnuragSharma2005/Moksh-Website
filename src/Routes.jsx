@@ -10,7 +10,7 @@ import DemoRequest from './pages/demo-request';
 import AboutPage from './pages/about';
 import Homepage from './pages/homepage';
 import PersonalProjectsPage from './pages/personal-projects';
-import TeamMemberProfilePage from './pages/team-member-profile';
+// import TeamMemberProfilePage from './pages/team-member-profile';
 
 const Routes = () => {
   return (
@@ -27,7 +27,7 @@ const Routes = () => {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/homepage" element={<Homepage />} />
         <Route path="/personal-projects" element={<PersonalProjectsPage />} />
-        <Route path="/team-member-profile" element={<TeamMemberProfilePage />} />
+        {/* <Route path="/team-member-profile" element={<TeamMemberProfilePage />} /> */}
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>
       </ErrorBoundary>

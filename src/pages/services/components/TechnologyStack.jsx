@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 import Icon from '../../../components/AppIcon';
 import Image from '../../../components/AppImage';
 import Button from '../../../components/ui/Button';
-
+import { useNavigate } from "react-router-dom";
 
 const TechnologyStack = () => {
   const [activeCategory, setActiveCategory] = useState('frontend');
-
+   const navigate = useNavigate();
   const techCategories = {
     frontend: {
       title: 'Frontend Development',
@@ -413,14 +413,15 @@ const TechnologyStack = () => {
               Our technology experts can help you choose the right stack for your project requirements and business goals.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4">
-              <Button
-                variant="default"
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground">
-
-                <Icon name="MessageCircle" size={20} className="mr-2" />
-                Discuss Technology Stack
-              </Button>
+               <Button
+              variant="default"
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              onClick={() => navigate("/Contact")}
+            >
+              <Icon name="MessageCircle" size={20} className="mr-2" />
+              Discuss Technology Stack
+            </Button>
             </div>
           </div>
         </motion.div>

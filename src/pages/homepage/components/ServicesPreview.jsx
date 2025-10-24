@@ -18,8 +18,7 @@ const ServicesPreview = () => {
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
     imageAlt: 'Modern laptop displaying colorful website analytics dashboard with charts and graphs on screen',
     color: 'from-blue-500 to-purple-600',
-    projects: '150+',
-    startingPrice: '₹25,000'
+  
   },
   {
     id: 2,
@@ -30,8 +29,7 @@ const ServicesPreview = () => {
     image: "https://images.unsplash.com/photo-1607270787560-406a02164403",
     imageAlt: 'Hands holding smartphone displaying modern mobile app interface with clean design and colorful elements',
     color: 'from-green-500 to-teal-600',
-    projects: '80+',
-    startingPrice: '₹50,000'
+  
   },
   {
     id: 3,
@@ -42,8 +40,7 @@ const ServicesPreview = () => {
     image: "https://images.unsplash.com/photo-1502828854506-40046dd51e0f",
     imageAlt: 'Shopping cart icon on laptop keyboard with credit cards and packages representing e-commerce business',
     color: 'from-orange-500 to-red-600',
-    projects: '60+',
-    startingPrice: '₹40,000'
+   
   },
   {
     id: 4,
@@ -54,20 +51,22 @@ const ServicesPreview = () => {
     image: "https://images.unsplash.com/photo-1561070791-2526d30994b5",
     imageAlt: 'Designer workspace with color palette swatches, sketches, and digital tablet showing UI design mockups',
     color: 'from-pink-500 to-purple-600',
-    projects: '200+',
-    startingPrice: '₹15,000'
-  },
+   
+  }, 
   {
-    id: 5,
-    icon: 'Shield',
-    title: 'Government Platforms',
-    description: 'Secure, compliant digital platforms designed specifically for government and public sector needs.',
-    features: ['Security Compliance', 'Accessibility Standards', 'Data Protection', 'Scalable Architecture'],
-    image: "https://images.unsplash.com/photo-1654588827084-b6f27735ba7d",
-    imageAlt: 'Government building with digital overlay showing secure network connections and data protection symbols',
-    color: 'from-indigo-500 to-blue-600',
-    projects: '25+',
-    startingPrice: '₹75,000'
+      id: '5',
+      title: 'Content Writing',
+      icon: 'FileText',
+      image: "https://images.unsplash.com/photo-1654588827084-b6f27735ba7d",
+      description: 'Engage your audience with compelling, SEO-optimized content. From blog posts to website copy, we create content that resonates with your audience and drives conversions.',
+      features: [
+        'SEO-optimized blog posts',
+        'Website copywriting',
+        'Social media content',
+        'Email marketing copy',
+        'Product descriptions',
+        'Content strategy planning'] 
+        
   },
   {
     id: 6,
@@ -78,8 +77,7 @@ const ServicesPreview = () => {
     image: "https://images.unsplash.com/photo-1589320843284-4b70884083a6",
     imageAlt: 'Technical support team monitoring multiple computer screens showing system performance and analytics',
     color: 'from-gray-500 to-gray-700',
-    projects: '300+',
-    startingPrice: '₹5,000/month'
+   
   }];
 
 
