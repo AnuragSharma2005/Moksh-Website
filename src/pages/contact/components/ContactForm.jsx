@@ -68,129 +68,116 @@ const ContactForm = () => {
           </p>
         </motion.div>
 
-        <motion.form
-          action="https://formsubmit.co/mokshdigitalco@gmail.com"
-          method="POST"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          className="bg-white rounded-2xl p-12 shadow-xl border-2 space-y-8"
-          style={{ borderColor: primaryColor }}
-          onSubmit={(e) => !validateForm() && e.preventDefault()}
-        >
-          <input type="hidden" name="_subject" value="New Inquiry from Website" />
-          <input type="hidden" name="_autoresponse" value="Thank you for reaching out! We'll contact you soon." />
+       <motion.form
+  action="https://formsubmit.co/mokshdigitalco@gmail.com"
+  method="POST"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.6 }}
+  className="bg-white border-2 border-[#3C467B] rounded-2xl p-6 sm:p-8 md:p-12 shadow-xl space-y-6 md:space-y-8"
+  onSubmit={(e) => !validateForm() && e.preventDefault()}
+>
+  <input type="hidden" name="_subject" value="New Inquiry from Website" />
+  <input type="hidden" name="_autoresponse" value="Thank you for reaching out! We'll contact you soon." />
 
-          {/* Basic Info */}
-          <div className="grid md:grid-cols-2 gap-8">
-            <Input
-              label="Full Name"
-              name="name"
-              type="text"
-              placeholder="Enter your full name"
-              value={formData.name}
-              onChange={(e) => handleInputChange('name', e.target.value)}
-              error={errors.name}
-              className="border-2 border-[#3C467B] rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#3C467B]"
-            />
-            <Input
-              label="Email Address"
-              name="email"
-              type="email"
-              placeholder="your.email@company.com"
-              value={formData.email}
-              onChange={(e) => handleInputChange('email', e.target.value)}
-              error={errors.email}
-              className="border-2 border-[#3C467B] rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#3C467B]"
-            />
-          </div>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+    <Input
+      label="Full Name"
+      name="name"
+      type="text"
+      placeholder="Enter your full name"
+      value={formData.name}
+      onChange={(e) => handleInputChange('name', e.target.value)}
+      error={errors.name}
+      className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#3C467B]"
+    />
+    <Input
+      label="Email Address"
+      name="email"
+      type="email"
+      placeholder="your.email@company.com"
+      value={formData.email}
+      onChange={(e) => handleInputChange('email', e.target.value)}
+      error={errors.email}
+      className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#3C467B]"
+    />
+  </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <Input
-              label="Phone Number"
-              name="phone"
-              type="tel"
-              placeholder="+91 98765 43210"
-              value={formData.phone}
-              onChange={(e) => handleInputChange('phone', e.target.value)}
-              error={errors.phone}
-              className="border-2 border-[#3C467B] rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#3C467B]"
-            />
-            <Input
-              label="Company Name"
-              name="company"
-              type="text"
-              placeholder="Your company (optional)"
-              value={formData.company}
-              onChange={(e) => handleInputChange('company', e.target.value)}
-              className="border-2 border-[#3C467B] rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#3C467B]"
-            />
-          </div>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+    <Input
+      label="Phone Number"
+      name="phone"
+      type="tel"
+      placeholder="+91 98776 53180"
+      value={formData.phone}
+      onChange={(e) => handleInputChange('phone', e.target.value)}
+      error={errors.phone}
+      className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#3C467B]"
+    />
+    <Input
+      label="Company Name"
+      name="company"
+      type="text"
+      placeholder="Your company (optional)"
+      value={formData.company}
+      onChange={(e) => handleInputChange('company', e.target.value)}
+      className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#3C467B]"
+    />
+  </div>
 
-          {/* Inquiry + Preferred Contact */}
-          <div className="grid md:grid-cols-2 gap-8">
-            <Select
-              label="Inquiry Type"
-              name="inquiryType"
-              placeholder="Select service type"
-              options={inquiryTypes}
-              value={formData.inquiryType}
-              onChange={(value) => handleInputChange('inquiryType', value)}
-              error={errors.inquiryType}
-              className="border-2 border-[#3C467B] rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#3C467B]"
-            />
-            <Select
-              label="Preferred Contact Method"
-              name="preferredContact"
-              placeholder="How should we contact you?"
-              options={contactPreferences}
-              value={formData.preferredContact}
-              onChange={(value) => handleInputChange('preferredContact', value)}
-              className="border-2 border-[#3C467B] rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#3C467B]"
-            />
-          </div>
+  <Select
+    label="Inquiry Type"
+    name="inquiryType"
+    placeholder="Select service type"
+    options={inquiryTypes}
+    value={formData.inquiryType}
+    onChange={(value) => handleInputChange('inquiryType', value)}
+    error={errors.inquiryType}
+    className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#3C467B]"
+  />
+  <Select
+    label="Preferred Contact Method"
+    name="preferredContact"
+    placeholder="How should we contact you?"
+    options={contactPreferences}
+    value={formData.preferredContact}
+    onChange={(value) => handleInputChange('preferredContact', value)}
+    className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#3C467B]"
+  />
 
-          {/* Message */}
-          <div>
-            <label className="block text-sm font-medium text-[#3C467B] mb-2">Project Details</label>
-            <textarea
-              name="message"
-              rows={5}
-              placeholder="Tell us about your project requirements, goals, and any specific features..."
-              value={formData.message}
-              onChange={(e) => handleInputChange('message', e.target.value)}
-              className="w-full border-2 border-[#3C467B] rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#3C467B] resize-none transition-all duration-200"
-            />
-            {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message}</p>}
-          </div>
+  <textarea
+    name="message"
+    rows={5}
+    placeholder="Tell us about your project requirements..."
+    value={formData.message}
+    onChange={(e) => handleInputChange('message', e.target.value)}
+    className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#3C467B] resize-none transition-all duration-200"
+  />
 
-          {/* Terms Checkbox */}
-          <div className="flex items-center space-x-2">
-            <input
-              type="checkbox"
-              name="terms"
-              checked={formData.terms}
-              onChange={(e) => handleInputChange('terms', e.target.checked)}
-              className="accent-[#3C467B]"
-            />
-            <span className="text-sm text-[#3C467B]">I accept the terms and conditions *</span>
-          </div>
+  <div className="flex items-center space-x-2">
+    <input
+      type="checkbox"
+      name="terms"
+      checked={formData.terms}
+      onChange={(e) => handleInputChange('terms', e.target.checked)}
+      className="accent-[#3C467B]"
+    />
+    <span className="text-sm text-[#3C467B]">I accept the terms and conditions *</span>
+  </div>
 
-          {/* Submit */}
-          <div>
-            <Button
-              type="submit"
-              variant="default"
-              size="lg"
-              fullWidth
-              className="bg-[#3C467B] hover:bg-[#2f365e] text-white font-semibold shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
-              iconName="Send"
-              iconPosition="right"
-            >
-              Send Inquiry
-            </Button>
-          </div>
-        </motion.form>
+  <Button
+    type="submit"
+    variant="default"
+    size="lg"
+    fullWidth
+    className="bg-[#3C467B] hover:bg-[#2f365e] text-white font-semibold shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+    iconName="Send"
+    iconPosition="right"
+  >
+    Send Inquiry
+  </Button>
+</motion.form>
+
       </div>
     </section>
   );
