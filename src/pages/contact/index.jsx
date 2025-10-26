@@ -26,7 +26,7 @@ const Contact = () => {
         <meta property="og:description" content="Get in touch for expert digital solutions including website development, mobile apps, SEO, and digital marketing services." />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://mokshdigital.com/contact" />
+        <link rel="canonical" href="https://mokshdigital.app/contact" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

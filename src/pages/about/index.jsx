@@ -27,7 +27,7 @@ const AboutPage = () => {
         <meta property="og:description" content="Discover our journey as a government-authorized digital transformation partner delivering exceptional digital solutions." />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://mokshdigital.com/about" />
+        <link rel="canonical" href="https://mokshdigital.app/about" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

@@ -210,7 +210,7 @@ const ServicesPage = () => {
         />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://mokshdigital.com/services" />
+        <link rel="canonical" href="https://mokshdigital.app/services" />
       </Helmet>
 
       <div className="min-h-screen bg-background">

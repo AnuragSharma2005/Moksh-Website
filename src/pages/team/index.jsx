@@ -27,7 +27,7 @@ const TeamPage = () => {
         <meta property="og:description" content="Discover the talented professionals behind Moksh Digital's digital transformation solutions." />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://mokshdigital.com/team" />
+        <link rel="canonical" href="https://mokshdigital.app/team" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

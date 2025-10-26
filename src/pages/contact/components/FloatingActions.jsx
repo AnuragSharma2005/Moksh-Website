@@ -44,7 +44,7 @@ const FloatingActions = () => {
       label: 'Email',
       color: 'bg-purple-500 hover:bg-purple-600',
       textColor: 'text-white',
-      action: () => window.open('mailto:hello@mokshdigital.com?subject=Digital Services Inquiry', '_self'),
+      action: () => window.open('mailto:hello@mokshdigital.app?subject=Digital Services Inquiry', '_self'),
       tooltip: 'Send Email'
     }
   ];

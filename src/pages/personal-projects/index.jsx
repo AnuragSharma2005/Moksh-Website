@@ -151,7 +151,7 @@ const PersonalProjectsPage = () => {
         <meta property="og:title" content="Personal Projects - Innovation Showcase | Moksh Digital" />
         <meta property="og:description" content="Discover our innovative personal projects showcasing cutting-edge technology implementations and creative solutions." />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://mokshdigital.com/personal-projects" />
+        <link rel="canonical" href="https://mokshdigital.app/personal-projects" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

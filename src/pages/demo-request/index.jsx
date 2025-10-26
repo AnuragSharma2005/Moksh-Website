@@ -39,7 +39,7 @@ const DemoRequest = () => {
         <meta property="og:description" content="Get a personalized demo of our digital solutions including websites, mobile apps, SEO, and digital marketing." />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://mokshdigital.com/demo-request" />
+        <link rel="canonical" href="https://mokshdigital.app/demo-request" />
       </Helmet>
 
       <div className="min-h-screen bg-background">

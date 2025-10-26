@@ -26,11 +26,11 @@ const Homepage = () => {
         <meta property="og:title" content="Moksh Digital - Premier Digital Transformation Partner" />
         <meta property="og:description" content="Expert digital solutions including website development, mobile apps, SEO, and digital marketing. Government-authorized partner with 150+ successful projects." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://mokshdigital.com" />
+        <meta property="og:url" content="https://mokshdigital.app" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Moksh Digital - Digital Transformation Partner" />
         <meta name="twitter:description" content="Transform your business with expert digital solutions. Website development, mobile apps, SEO & more." />
-        <link rel="canonical" href="https://mokshdigital.com" />
+        <link rel="canonical" href="https://mokshdigital.app" />
       </Helmet>
       
       <div className="min-h-screen bg-background">
