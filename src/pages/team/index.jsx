@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import Header from '../../components/ui/Header';
-import TeamMemberCard from './components/TeamMemberCard';
+// import TeamMemberCard from './components/TeamMemberCard';
 // import TeamStats from './components/TeamStats';
 import ExpertiseMapping from './components/ExpertiseMapping';
 // import TeamCulture from './components/TeamCulture';
 // import OrganizationChart from './components/OrganizationChart';
-import FloatingActions from '../../components/FloatingActions';
+// import FloatingActions from '../../components/FloatingActions';
 
 
 const TeamPage = () => {
@@ -35,7 +35,7 @@ const TeamPage = () => {
         <ExpertiseMapping />
         {/* <TeamCulture /> */}
         {/* <OrganizationChart /> */}
-        <FloatingActions />
+        {/* <FloatingActions /> */}
       </div>
     </>
   );

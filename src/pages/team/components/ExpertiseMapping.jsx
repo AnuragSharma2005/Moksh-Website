@@ -12,19 +12,19 @@ const teamMembers = [
   {
     name: "Anurag Sharma",
     role: "Co-Founder & CMO",
-    qualification: "Bachelor of Computer Science Engineer",
+    qualification: "B.Tech in Computer Science",
     img: "Anurag1.jpg",
   },
   {
     name: "Aditya Sharma",
     role: "Co-Founder & CTO",
-    qualification: "Bachelor of Computer Science Engineer",
+    qualification: "B.Tech in Computer Science",
     img: "aditya1.jpg",
   },
   {
     name: "Vaibhav Katiyal",
     role: "Co-Founder & COO",
-    qualification: "Bachelor of Computer Science Engineer",
+    qualification: "B.Tech in Computer Science",
     img: "Vaibhav1.jpg",
   },
 ];

@@ -17,7 +17,7 @@ const Homepage = () => {
   return (
     <>
       <Helmet>
-        <title>Moksh Digital - Premier Digital Transformation Partner | Web Development, Mobile Apps & Digital Solutions</title>
+        <title>Moksh Digital</title>
         <meta 
           name="description" 
           content="Transform your business with Moksh Digital's expert digital solutions. Specializing in website development, mobile apps, e-commerce, SEO, content writing, and digital marketing. Government-authorized partner with 150+ successful projects and 98% client satisfaction." 
