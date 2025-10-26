@@ -19,7 +19,7 @@ const teamMembers = [
     name: "Aditya Sharma",
     role: "Co-Founder & CTO",
     qualification: "Bachelor of Computer Science Engineer",
-    img: "Aditya1.jpg",
+    img: "aditya1.jpg",
   },
   {
     name: "Vaibhav Katiyal",
