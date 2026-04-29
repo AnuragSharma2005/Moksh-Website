@@ -72,16 +72,16 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    {
-      icon: 'MapPin',
-      title: 'Address',
-      content: 'Dera-Bassi , Punjab , India'
-    },
-    {
-      icon: 'Phone',
-      title: 'Phone',
-      content: '+91 98776 53180'
-    },
+    // {
+    //   icon: 'MapPin',
+    //   title: 'Address',
+    //   content: 'Dera-Bassi , Punjab , India'
+    // },
+    // {
+    //   icon: 'Phone',
+    //   title: 'Phone',
+    //   content: '+91 98776 53180'
+    // },
     {
       icon: 'Mail',
       title: 'Email',
@@ -296,16 +296,16 @@ const Footer = () => {
         </div>
       </div>
       {/* Emergency Contact Strip */}
-      <div className="bg-conversion">
+      {/* <div className="bg-conversion">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-conversion-foreground">
             <div className="flex items-center space-x-2">
               <Icon name="Phone" size={16} />
-              <span className="text-sm font-medium">24/7 Support: +91 98776 53180</span>
+              <span className="text-sm font-medium">24/7 </span>
             </div>
             <div className="flex items-center space-x-2">
               <Icon name="MessageCircle" size={16} />
-              <span className="text-sm font-medium">WhatsApp: +91 98776 53180</span>
+              <span className="text-sm font-medium"></span>
             </div>
             <div className="flex items-center space-x-2">
               <Icon name="Mail" size={16} />
@@ -313,7 +313,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 };

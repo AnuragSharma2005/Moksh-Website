@@ -35,14 +35,15 @@ const ContactHero = () => {
           {/* Quick Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
-              variant="default"
-              size="lg"
-              className="bg-white text-primary hover:bg-white/90 font-cta"
-              iconName="Phone"
-              iconPosition="left"
-            >
-              Call Now: +91 98776 53180
-            </Button>
+            variant="default"
+            size="lg"
+            className="bg-white text-primary hover:bg-white/90 font-cta"
+            iconName="Phone"
+            iconPosition="left"
+            onClick={() => window.location.href = "tel:+919877653180"}
+          >
+            Call Now
+          </Button>
            <Button
             variant="outline"
             size="lg"

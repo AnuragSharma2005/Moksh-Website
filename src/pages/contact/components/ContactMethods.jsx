@@ -11,7 +11,7 @@ const ContactMethods = () => {
       methods: [
         {
           type: "WhatsApp",
-          value: "+91 98776 53180",
+          value: "",
           icon: "MessageCircle",
           action: "Chat Now",
           primary: true,
@@ -19,7 +19,7 @@ const ContactMethods = () => {
         },
         {
           type: "Phone Call",
-          value: "+91 98776 53180",
+          value: "",
           icon: "Phone",
           action: "Call Now",
           primary: true,

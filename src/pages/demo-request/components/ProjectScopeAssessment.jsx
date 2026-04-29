@@ -6,6 +6,7 @@ const DemoRequestForm = () => {
     companyName: "",
     companyDescription: "",
     businessType: "",
+    phone: "", // ✅ ADDED PHONE FIELD
     address: "",
     city: "",
     state: "",
@@ -28,14 +29,14 @@ const DemoRequestForm = () => {
   const websiteTypes = ["Dynamic", "Static"];
   const platforms = ["Zoom", "Google Meet", "In-Person"];
 
-  // Validation logic for each step
   const validateStep = () => {
     switch (step) {
       case 1:
         return (
           formData.companyName.trim() !== "" &&
           formData.companyDescription.trim() !== "" &&
-          formData.businessType.trim() !== ""
+          formData.businessType.trim() !== "" &&
+          formData.phone.trim() !== "" // ✅ ADDED VALIDATION
         );
       case 2:
         return (
@@ -97,13 +98,6 @@ const DemoRequestForm = () => {
                 {index + 1}
               </div>
               <p className="text-xs sm:text-sm mt-2">{title}</p>
-              {index < stepTitles.length - 1 && (
-                <div
-                  className={`absolute top-4 sm:top-5 right-[-50%] sm:right-[-40%] w-full h-1 ${
-                    step > index + 1 ? "bg-blue-500" : "bg-gray-300"
-                  } z-0`}
-                ></div>
-              )}
             </div>
           ))}
         </div>
@@ -114,7 +108,6 @@ const DemoRequestForm = () => {
           method="POST"
           className="space-y-6"
         >
-          {/* Hidden fields for formsubmit */}
           <input type="hidden" name="_subject" value="New Demo Request" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
@@ -123,6 +116,7 @@ const DemoRequestForm = () => {
             name="_next"
             value="https://yourwebsite.com/thank-you"
           />
+
           {Object.entries(formData).map(([key, value]) => (
             <input key={key} type="hidden" name={key} value={value} />
           ))}
@@ -133,6 +127,7 @@ const DemoRequestForm = () => {
               <h2 className="text-lg sm:text-xl font-semibold text-blue-700">
                 Step 1: Company Details
               </h2>
+
               <input
                 type="text"
                 name="companyName"
@@ -142,6 +137,7 @@ const DemoRequestForm = () => {
                 className="border p-3 rounded w-full"
                 required
               />
+
               <textarea
                 name="companyDescription"
                 value={formData.companyDescription}
@@ -150,6 +146,7 @@ const DemoRequestForm = () => {
                 className="border p-3 rounded w-full"
                 required
               />
+
               <input
                 type="text"
                 name="businessType"
@@ -159,6 +156,18 @@ const DemoRequestForm = () => {
                 className="border p-3 rounded w-full"
                 required
               />
+
+              {/* ✅ PHONE NUMBER FIELD ADDED */}
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Phone Number"
+                className="border p-3 rounded w-full"
+                required
+              />
+
               <input
                 type="text"
                 name="address"
@@ -167,24 +176,6 @@ const DemoRequestForm = () => {
                 placeholder="Address (Optional)"
                 className="border p-3 rounded w-full"
               />
-              <div className="flex flex-col sm:flex-row gap-4">
-                <input
-                  type="text"
-                  name="city"
-                  value={formData.city}
-                  onChange={handleChange}
-                  placeholder="City (Optional)"
-                  className="border p-3 rounded w-full"
-                />
-                <input
-                  type="text"
-                  name="state"
-                  value={formData.state}
-                  onChange={handleChange}
-                  placeholder="State (Optional)"
-                  className="border p-3 rounded w-full"
-                />
-              </div>
             </div>
           )}
 
@@ -194,6 +185,7 @@ const DemoRequestForm = () => {
               <h2 className="text-lg sm:text-xl font-semibold text-blue-700">
                 Step 2: Demo Preferences
               </h2>
+
               <select
                 name="demoCategory"
                 value={formData.demoCategory}
@@ -208,6 +200,7 @@ const DemoRequestForm = () => {
                   </option>
                 ))}
               </select>
+
               <select
                 name="websiteType"
                 value={formData.websiteType}
@@ -222,13 +215,6 @@ const DemoRequestForm = () => {
                   </option>
                 ))}
               </select>
-              <textarea
-                name="additionalInfo"
-                value={formData.additionalInfo}
-                onChange={handleChange}
-                placeholder="Additional Information (Optional)"
-                className="border p-3 rounded w-full"
-              />
             </div>
           )}
 
@@ -238,6 +224,7 @@ const DemoRequestForm = () => {
               <h2 className="text-lg sm:text-xl font-semibold text-blue-700">
                 Step 3: Schedule Your Demo
               </h2>
+
               <input
                 type="date"
                 name="meetingDate"
@@ -246,6 +233,7 @@ const DemoRequestForm = () => {
                 className="border p-3 rounded w-full"
                 required
               />
+
               <input
                 type="time"
                 name="meetingTime"
@@ -254,6 +242,7 @@ const DemoRequestForm = () => {
                 className="border p-3 rounded w-full"
                 required
               />
+
               <select
                 name="platform"
                 value={formData.platform}
@@ -268,71 +257,37 @@ const DemoRequestForm = () => {
                   </option>
                 ))}
               </select>
-              <textarea
-                name="notes"
-                value={formData.notes}
-                onChange={handleChange}
-                placeholder="Additional Notes (Optional)"
-                className="border p-3 rounded w-full"
-              />
             </div>
           )}
 
           {/* STEP 4 */}
           {step === 4 && (
-            <div className="space-y-4">
-              <h2 className="text-lg sm:text-xl font-semibold text-blue-700">
-                Step 4: Review & Submit
-              </h2>
-              <div className="border-2 border-blue-300 p-4 rounded space-y-2 bg-gray-50 text-sm sm:text-base">
-                {Object.entries(formData).map(
-                  ([key, value]) =>
-                    value && (
-                      <p key={key}>
-                        <span className="font-semibold text-blue-600">
-                          {key.replace(/([A-Z])/g, " $1")}:
-                        </span>{" "}
-                        {value}
-                      </p>
-                    )
-                )}
-              </div>
+            <div className="space-y-2 border p-4 bg-gray-50 rounded">
+              {Object.entries(formData).map(([key, value]) => (
+                value && (
+                  <p key={key}>
+                    <strong>{key}:</strong> {value}
+                  </p>
+                )
+              ))}
             </div>
           )}
 
-          {/* Buttons */}
-          <div className="flex justify-between mt-6 flex-wrap gap-3">
+          {/* BUTTONS */}
+          <div className="flex justify-between">
             {step > 1 && (
-              <button
-                type="button"
-                onClick={prevStep}
-                className="px-5 py-2 border border-blue-500 text-blue-500 rounded hover:bg-blue-50 w-full sm:w-auto"
-              >
+              <button type="button" onClick={prevStep}>
                 Previous
               </button>
             )}
+
             {step < 4 && (
-              <button
-                type="button"
-                onClick={nextStep}
-                disabled={!validateStep()}
-                className={`px-5 py-2 rounded w-full sm:w-auto ${
-                  validateStep()
-                    ? "bg-blue-500 text-white hover:bg-blue-600"
-                    : "bg-gray-300 text-gray-500 cursor-not-allowed"
-                }`}
-              >
+              <button type="button" onClick={nextStep} disabled={!validateStep()}>
                 Next
               </button>
             )}
-            {step === 4 && (
-              <button
-                type="submit"
-                className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 w-full sm:w-auto"
-              >
-                Submit
-              </button>
-            )}
+
+            {step === 4 && <button type="submit">Submit</button>}
           </div>
         </form>
       </div>

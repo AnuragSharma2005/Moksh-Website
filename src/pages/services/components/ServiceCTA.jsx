@@ -44,7 +44,7 @@ const ServiceCTA = () => {
       icon: 'Phone',
       title: 'Call Us',
       description: 'Speak directly with our experts',
-      value: '+91 9877653180',
+      value: '',
       action: 'tel:+919877653180',
       color: 'text-success'
     },
@@ -60,7 +60,7 @@ const ServiceCTA = () => {
       icon: 'MessageCircle',
       title: 'WhatsApp',
       description: 'Quick chat for instant queries',
-      value: '+91 98776 53180',
+      value: '',
       action: 'https://wa.me/919877653180',
       color: 'text-success'
     },

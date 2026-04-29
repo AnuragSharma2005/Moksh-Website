@@ -6,8 +6,8 @@ const RadialFloatingMenuRight = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const actions = [
-    { id: 'top', icon: 'ArrowUp', label: 'Top', onClick: () => window.scrollTo({ top: 0, behavior: 'smooth' }), color: 'bg-primary hover:bg-primary/90' },
-    { id: 'whatsapp', icon: 'MessageCircle', label: 'WhatsApp', onClick: () => window.open('https://wa.me/919877653180', '_blank'), color: 'bg-green-500 hover:bg-green-600' },
+    // { id: 'top', icon: 'ArrowUp', label: 'Top', onClick: () => window.scrollTo({ top: 0, behavior: 'smooth' }), color: 'bg-primary hover:bg-primary/90' },
+    // { id: 'whatsapp', icon: 'MessageCircle', label: 'WhatsApp', onClick: () => window.open('https://wa.me/919877653180', '_blank'), color: 'bg-green-500 hover:bg-green-600' },
     { id: 'call', icon: 'Phone', label: 'Call', onClick: () => window.open('tel:+919877653180', '_self'), color: 'bg-blue-500 hover:bg-blue-600' },
     { id: 'email', icon: 'Mail', label: 'Email', onClick: () => window.open('mailto:mokshdigitalco@gmail.com', '_self'), color: 'bg-purple-500 hover:bg-purple-600' },
   ];
